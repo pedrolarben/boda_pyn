@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.bgimg {background-image: url("images/Noe.jpg")}
+.bgimg2 {background-image: url("https://www.w3schools.com/w3images/flowers.jpg")}
+</style>
+</head>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Pedro y Noelia</h1>
+    <h2>¡Se casan!</h2>
+    <h2><b>11.10.2024</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Inicio</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Pedro y Noelia</a>
+    <a href="#wedding" style="width:25%" class="w3-bar-item w3-button">Boda</a>
+    <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">Confirma</a>
+  </div>
+</div>
+
+<!-- About / Jane And John -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>Pedro y Noelia</b></h1>
+    <img class="w3-round w3-grayscale-min" src="images/us.jpeg" style="width:100%;margin:32px 0">
+    <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.</i>
+    </p><br>
+    <p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Detalles de la boda</a></p>
+  </div>
+</div>
+
+<!-- Background photo -->
+<div class="w3-display-container bgimg2">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Estás invitado</h1><br>
+    <h2 id="countdown"></h2>
+  </div>
+</div>
+
+<!-- Wedding information -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="wedding">
+  <div class="w3-content">
+    <h1 class="w3-text-grey"><b>La boda</b></h1>
+    <video class="w3-round-large w3-grayscale-min" style="width:100%;margin:64px 0;max-width: 580px;" autoplay loop muted>
+        <source src="images/venta.mp4" type="video/mp4">
+    </video>
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>¿Cuándo?</h2>
+        <p>Viernes 11 de Octubre de 2024 - 13:00</p>
+        <!-- <a href="https://www.google.com/calendar/event?action=TEMPLATE&dates=20241011T000000Z/20241011T235959Z&text=Boda%20Pedro%20y%20Noelia&details=Os%20esperamos%20a%20las%2012pm%20en%20la%20Real%20Venta%20de%20Antequera%20Sevilla&location=Av.%20de%20Jerez,%2054,%2041014%20Sevilla">
+            <p>📅 Añádelo a tu calendario</p>
+        </a> -->
+        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0ASUMMARY:Boda%20Pedro%20y%20Noelia%0D%0ADESCRIPTION:Os%20esperamos%20a%20las%2012pm%20en%20la%20Real%20Venta%20de%20Antequera%20Sevilla%0D%0ADTSTART:20241011T120000%0D%0ADTEND:20241011T130000%0D%0ALOCATION:Av.%20de%20Jerez,%2054,%2041014%20Sevilla%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR">
+            <p>📅 Añádelo a tu calendario</p>
+        </a>
+      </div>
+      <div class="w3-half">
+        <h2>¿Dónde?</h2>
+        <p>Real Venta de Antequera Sevilla</p>
+        <a href="https://g.co/kgs/QFBuZ5r">
+            <p>📍 Av. de Jerez, 54, 41014 Sevilla</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <h1>¡Dinos que sí!</h1>
+  <p class="w3-large">Usa el formulario para confirmar tu asistencia y la de tus acompañantes cómodamente</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Confirmar asistencia</button>
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:8px;max-width:680px">
+    <div class="w3-container w3-white w3-right w3-text-grey">
+            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block ">X</button>
+    </div>
+    <div class="w3-container w3-white w3-center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvAM1TCDr3tBZgRlppORVE6owfX-nZvbW2F60BGXD2wq_o-A/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>  
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-32">
+</footer>
+<div class="w3-hide-small" style="margin-bottom:64px"> </div>
+
+</body>
+</html>
+
+<script>
+    var countDownDate = new Date("Oct 11, 2024 12:00:00").getTime();
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+    
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    
+      document.getElementById("countdown").innerHTML = "Ya solo quedan " + days + " días parar la boda de Pedro y Noelia en la Real Venta de Antequera (Sevilla)";
+    
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "";
+      }
+    }, 60000);
+    </script>
