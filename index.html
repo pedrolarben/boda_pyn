@@ -146,13 +146,13 @@ p {line-height: 2}
 <script>
     var audio = document.getElementById("musicaFondo");
     audio.volume = 0.5; // Establece el volumen (de 0 a 1)
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function scrollHandler() {
         // Intenta iniciar la reproducción de música
         audio.play()
         .then(function() {
             console.log("La reproducción de música ha comenzado correctamente.");
             // Una vez que la reproducción se haya iniciado, elimina el evento de desplazamiento
-            window.removeEventListener("scroll", arguments.callee);
+            window.removeEventListener("scroll", scrollHandler);
         })
         .catch(function(error) {
             console.error("Error al iniciar la reproducción de música:", error);
@@ -160,13 +160,13 @@ p {line-height: 2}
     });
 
     // Agrega un evento de clic en el documento para iniciar la reproducción de música
-    document.addEventListener("click", function() {
+    document.addEventListener("click", function clickHandler() {
     // Intenta iniciar la reproducción de música
         audio.play()
         .then(function() {
             console.log("La reproducción de música ha comenzado correctamente.");
             // Una vez que la reproducción se haya iniciado, elimina el evento de clic en el documento
-            document.removeEventListener("click", arguments.callee);
+            document.removeEventListener("click", clickHandler);
         })
         .catch(function(error) {
             console.error("Error al iniciar la reproducción de música:", error);
