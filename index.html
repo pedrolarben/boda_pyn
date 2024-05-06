@@ -23,6 +23,13 @@ p {line-height: 2}
 
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class=" w3-text-white w3-center" style="padding-top: 16px;">
+    <audio id="musicaFondo" controls="controls" autoplay loop>
+        <source src="static/musicaFondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+
   <div class="w3-display-middle w3-text-white w3-center">
     <h1 class="w3-jumbo">Pedro y Noelia</h1>
     <h2>¡Se casan!</h2>
@@ -135,4 +142,34 @@ p {line-height: 2}
         document.getElementById("countdown").innerHTML = "";
       }
     }, 1000);
-    </script>
+</script>
+<script>
+    var audio = document.getElementById("musicaFondo");
+    audio.volume = 0.5; // Establece el volumen (de 0 a 1)
+    window.addEventListener("scroll", function() {
+        // Intenta iniciar la reproducción de música
+        audio.play()
+        .then(function() {
+            console.log("La reproducción de música ha comenzado correctamente.");
+            // Una vez que la reproducción se haya iniciado, elimina el evento de desplazamiento
+            window.removeEventListener("scroll", arguments.callee);
+        })
+        .catch(function(error) {
+            console.error("Error al iniciar la reproducción de música:", error);
+        });
+    });
+
+    // Agrega un evento de clic en el documento para iniciar la reproducción de música
+    document.addEventListener("click", function() {
+    // Intenta iniciar la reproducción de música
+        audio.play()
+        .then(function() {
+            console.log("La reproducción de música ha comenzado correctamente.");
+            // Una vez que la reproducción se haya iniciado, elimina el evento de clic en el documento
+            document.removeEventListener("click", arguments.callee);
+        })
+        .catch(function(error) {
+            console.error("Error al iniciar la reproducción de música:", error);
+        });
+    });
+</script>
